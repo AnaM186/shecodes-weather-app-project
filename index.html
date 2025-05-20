@@ -3,28 +3,63 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+    <title>shecodes-weather-project</title>
   </head>
   <body>
-    <header>
-      <form>
-        <input type="text" placeholder="Enter a city.." required />
-        <input type="submit" value="Search" />
-      </form>
-    </header>
-    <main>
-      <h1>Paris</h1>
-      <p>
-        Monday 16:13, overcast cloluds
-        <br />
-        Humidity: 36%, Wind: 5 km/h
-      </p>
-      ⛅ 14°C
-    </main>
+    <div class="weather-app-container">
+      <header>
+        <form>
+          <input
+            type="text"
+            placeholder="Enter a city.."
+            required
+            autofocus
+            class="search-form-input"
+          />
+          <input type="submit" value="Search" class="search-form-button" />
+        </form>
+      </header>
+      <main>
+        <div class="weather-app-main">
+          <div>
+            <h1 class="city">Paris</h1>
+            <p class="weather-description">
+              Monday 16:13, overcast clouds
+              <br />
+              Humidity: <strong>36%</strong>, Wind: <strong>5 km/h</strong>
+            </p>
+          </div>
+          <div class="weather-temperature-container">
+            <div class="weather-icon">🌤️</div>
+            <div class="weather-temperature">14</div>
+            <div class="weather-unit">°C</div>
+          </div>
+        </div>
+      </main>
 
-    <footer>
-      This project was coded by Ana Moskalenko, is open-sourced on GitHub and
-      hosted on Netlify
-    </footer>
+      <footer>
+        This project was coded by
+        <a href="https://github.com/AnaM186" target="_blank">Ana Moskalenko</a>,
+        is
+        <a
+          href="https://github.com/AnaM186/shecodes-weather-app-project"
+          target="_blank"
+          >open-sourced on GitHub</a
+        >
+        and hosted on
+        <a
+          href="https://shecodes-weather-app-project1.netlify.app/"
+          target="_blank"
+          >Netlify</a
+        >
+      </footer>
+    </div>
   </body>
 </html>
