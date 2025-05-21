@@ -42,8 +42,8 @@ main {
   justify-content: space-between;
 }
 .city {
-  font-size: 40px;
-  line-height: 48px;
+  font-size: 52px;
+  line-height: 52px;
   color: #2d6447;
   margin: 0;
 }
@@ -60,9 +60,9 @@ main {
 }
 
 .weather-icon {
-  font-size: 54px;
-  line-height: 54px;
-  margin-top: 8px;
+  width: 88px;
+  height: 88px;
+  line-height: 88px;
 }
 
 .weather-temperature {
