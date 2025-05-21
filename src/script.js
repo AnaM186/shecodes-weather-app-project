@@ -1,10 +1,45 @@
 function showTemperature(response) {
   let currentTemperature = response.data.temperature.current;
-  let temperature = Math.round(currentTemperature);
   let temperatureElement = document.querySelector("#temperature-element");
-  temperatureElement.innerHTML = temperature;
   let city = document.querySelector("#city");
-  city.innerHTML = response.data.city;
+  let description = document.querySelector("#description");
+  let humidity = document.querySelector("#humidity");
+  let windSpeed = document.querySelector("#wind-speed");
+  let timeElement = document.querySelector("#time");
+  let date = new Date(response.data.time * 1000);
+  let iconElement = document.querySelector("#icon");
+
+  iconElement.innerHTML = city.innerHTML = response.data.city;
+  timeElement.innerHTML = formattedDate(date);
+  temperatureElement.innerHTML = Math.round(currentTemperature);
+  description.innerHTML = response.data.condition.description;
+  humidity.innerHTML = `${response.data.temperature.humidity}%,`;
+  windSpeed.innerHTML = `${response.data.wind.speed}km/h`;
+}
+
+function formattedDate(date) {
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[date.getDay()];
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
+
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+
+  return `${day} ${hours}:${minutes},`;
 }
 
 function searchCity(city) {

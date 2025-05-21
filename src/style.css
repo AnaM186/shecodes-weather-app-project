@@ -62,7 +62,7 @@ main {
 .weather-icon {
   font-size: 54px;
   line-height: 54px;
-  margin-top: 20px;
+  margin-top: 8px;
 }
 
 .weather-temperature {
@@ -74,7 +74,6 @@ main {
 }
 .weather-unit {
   font-size: 28px;
-
   margin-top: 6px;
 }
 
