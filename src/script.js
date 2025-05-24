@@ -59,4 +59,25 @@ function handleSearchForm(event) {
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSearchForm);
 
+function displayForecast() {
+  let days = ["Fri", "Sat", "Sun", "Mon", "Tue"];
+  let forecastHtml = "";
+
+  days.forEach(function (day) {
+    forecastHtml += `<div class="weather-forecast-day">
+  <div class="forecast-date">${day}</div>
+  <div class="forecast-icon">⛅</div>
+  <div class="forecast-temperatures">
+    <div class="forecast-temperature">
+      <strong>16°</strong>
+    </div>
+    <div class="forecast-temperature">4°</div>
+  </div>
+  </div>`;
+  });
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = forecastHtml;
+}
+
 searchCity("Gateshead");
+displayForecast();
